@@ -1,0 +1,83 @@
+# Default values for minioWebApp.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+deployment:
+  metadata:
+    name: mysql-deployment
+    labels:
+      app: mysql
+  spec:
+    replicas: 1
+    selector:
+      app: mysql
+  template:
+    labels:
+      app: mysql
+  container:
+    name: mysql
+    containerPort: 3306
+
+image:
+  repository: mysql
+  tag: 5.7
+  imagePullPolicy: Always
+
+volume:
+  name1: mysql-initdb
+  configMap1: mysql-initdb-config
+  mountPath1: "/docker-entrypoint-initdb.d"
+
+  name2: mysql-data
+  pvc2: mysql-pvc
+  mountPath2: "/var/lib/mysql"
+
+####################################
+
+service:
+  name: mysql-service
+  spec:
+    externalPortType: NodePort
+    selector:
+      app: mysql
+  ports:
+    name: mysqlport
+    port: 3306
+    targetPort: 3306
+    externalPort: 31001
+
+
+####################################
+
+pv:
+  name: mysql-pv
+  type: local
+  storageClassName: manual
+  capacity: 1Gi
+  accessModes: ReadWriteOnce
+  path: "/cdmsData/mysqlData"
+  claimRef:
+    pvcname: mysql-pvc
+
+####################################
+
+pvc:
+  name: mysql-pvc
+  labels:
+    app: mysql-storage-claim
+  storageClassName: manual
+  capacity: 900Mi
+  accessModes: ReadWriteOnce
+
+####################################
+
+secret:
+  name: mysql-secrets
+  data:
+    rootPassword: bXlzcWxhZG1pbg==
+
+####################################
+
+configmap:
+  name: mysql-initdb-config
+
+####################################

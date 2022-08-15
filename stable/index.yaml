@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  cdmswebapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-15T02:28:13.541031472+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 4c9efa69e62846c1074140ff22c3c468f032350292dfa1354c8307a747ee6dbf
+    name: cdmswebapp
+    type: application
+    urls:
+    - https://sarwank.github.io/Helm3/stable/cdmswebapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-15T02:28:13.538407409+05:30"
