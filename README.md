@@ -1,6 +1,6 @@
 ## cdmsWebApp Helm Chart
 
-cdmsWebApp is a SAAS storage similar to Google Drive to store your data in remote datastore.
+OUTSIDE: cdmsWebApp is a SAAS storage similar to Google Drive to store your data in remote datastore.
 
 ### Markdown
 
@@ -13,22 +13,22 @@ Tools:
 ### Configure cdmsWebApp Helm repo
 
 ```markdown
-helm repo add cdmswebapp https://sarwank.github.io/Helm3/stable
+helm repo add pyalive-cdmswebapp https://sarwank.github.io/HelmRepos/stable
 ```
 ### Installing the Chart
-Install this chart using:
+Install this chart with default values using:
 
 ```markdown
-helm install my-cdmswebapp cdmswebapp/cdmswebapp
+helm install my-cdmswebapp pyalive-cdmswebapp/cdmswebapp --version 0.1.0
 ```
 
-For OnPrem Infra use below command: (modify the image tag as per your need & configuration) (80 tag is stable at this time)
+For OnPrem Infra use below command: (modify the image tag as per your need & configuration) (103 tag is stable at this time)
 ```markdown
-helm upgrade --install cdmswebapp cdmsWebApp-x.1.0 --set  image.tag=80 --set  global.namespace=cdms -n cdms --create-namespace
+helm install cdmswebapp pyalive-cdmswebapp/cdmswebapp --version 0.1.0 --set  image.tag=103 --set  global.namespace=cdms -n cdms --create-namespace
 ```
-For CD using Octopus Deploy & Helm use below command: (Set variable using octopus variables) (93 tag is stable at this time)
+For CD using Octopus Deploy & Helm use below command: (Set variable using octopus variables) (101 tag is stable at this time)
 ```markdown
-helm upgrade --install cdmswebapp cdmsWebApp-x.1.0 --set  image.tag=93--set  global.namespace=cdms -n cdms --create-namespace
+helm install cdmswebapp pyalive-cdmswebapp/cdmswebapp --version 0.1.0 --set  image.tag=101 --set  global.namespace=cdms -n cdms --create-namespace
 ```
 
-#### Happy Helming
+#### Happy Helming...
