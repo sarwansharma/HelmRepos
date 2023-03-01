@@ -9,6 +9,6 @@ entries:
     name: cdmswebapp
     type: application
     urls:
-    - https://sarwank.github.io/Helm3/stable/cdmswebapp-0.1.0.tgz
+    - https://sarwansharma.github.io/Helm3/stable/cdmswebapp-0.1.0.tgz
     version: 0.1.0
 generated: "2022-08-15T02:28:13.538407409+05:30"
