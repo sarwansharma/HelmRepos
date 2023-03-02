@@ -3,12 +3,38 @@ entries:
   cdmswebapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-08-15T02:28:13.541031472+05:30"
+    created: "2023-03-02T15:04:45.651887719+05:30"
     description: A Helm chart for Kubernetes
-    digest: 4c9efa69e62846c1074140ff22c3c468f032350292dfa1354c8307a747ee6dbf
+    digest: 97b1a27d56125a77abd97b286e249aa6f327b7c485189f44ec8ebec448c126e1
     name: cdmswebapp
     type: application
     urls:
-    - https://sarwansharma.github.io/HelmRepos/stable/cdmswebapp-0.1.0.tgz
+    - cdmswebapp-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-15T02:28:13.538407409+05:30"
+  kubernetes-dashboard:
+  - apiVersion: v2
+    appVersion: 2.6.1
+    created: "2023-03-02T15:04:45.653753889+05:30"
+    dependencies:
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server/
+      version: 3.5.0
+    description: General-purpose web UI for Kubernetes clusters
+    digest: aea2c059da5dc08871e0702bcdfbb563a3693f46d748814e1313385427b4e159
+    home: https://github.com/kubernetes/dashboard
+    icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    keywords:
+    - kubernetes
+    - dashboard
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: cdesaintmartin@wiremind.fr
+      name: desaintmartin
+    name: kubernetes-dashboard
+    sources:
+    - https://github.com/kubernetes/dashboard
+    urls:
+    - kubernetes-dashboard-5.8.0.tgz
+    version: 5.8.0
+generated: "2023-03-02T15:04:45.649992793+05:30"
