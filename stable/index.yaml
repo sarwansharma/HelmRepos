@@ -9,7 +9,7 @@ entries:
     name: cdmswebapp
     type: application
     urls:
-    - https://sarwansharma.github.io/HelmRepos/cdmswebapp-0.1.0.tgz
+    - https://sarwansharma.github.io/HelmRepos/stable/cdmswebapp-0.1.0.tgz
     version: 0.1.0
   kubernetes-dashboard:
   - apiVersion: v2
@@ -35,7 +35,7 @@ entries:
     sources:
     - https://github.com/kubernetes/dashboard
     urls:
-    - https://sarwansharma.github.io/HelmRepos/kubernetes-dashboard-5.8.0.tgz
+    - https://sarwansharma.github.io/HelmRepos/stable/kubernetes-dashboard-5.8.0.tgz
     version: 5.8.0
   loki-stack:
   - apiVersion: v1
@@ -84,7 +84,7 @@ entries:
     - https://github.com/kubernetes-sigs/metrics-server
     type: application
     urls:
-    - https://sarwansharma.github.io/HelmRepos/metrics-server-3.8.2.tgz
+    - https://sarwansharma.github.io/HelmRepos/stable/metrics-server-3.8.2.tgz
     version: 3.8.2
   node-exporter:
   - apiVersion: v2
@@ -95,6 +95,6 @@ entries:
     name: node-exporter
     type: application
     urls:
-    - https://sarwansharma.github.io/HelmRepos/node-exporter-0.1.0.tgz
+    - https://sarwansharma.github.io/HelmRepos/stable/node-exporter-0.1.0.tgz
     version: 0.1.0
 generated: "2023-03-03T23:37:38.723703794+05:30"
