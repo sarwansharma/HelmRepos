@@ -53,7 +53,7 @@ entries:
     sources:
     - https://github.com/grafana/loki
     urls:
-    - https://sarwansharma.github.io/HelmRepos/loki-stack-2.6.5.tgz
+    - https://sarwansharma.github.io/HelmRepos/stable/loki-stack-2.6.5.tgz
     version: 2.6.5
   metrics-server:
   - annotations:
