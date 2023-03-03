@@ -1,4 +1,4 @@
-## cdmsWebApp Helm Chart
+## cdmsWebApp Helm Charts
 
 OUTSIDE: cdmsWebApp is a SAAS storage similar to Google Drive to store your data in remote datastore.
 
