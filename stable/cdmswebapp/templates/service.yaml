@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ .Values.global.namespace }}
+  name: {{ .Values.service.name }}
+spec:
+  type: {{ .Values.service.spec.externalPortType }}
+  selector:
+    app: {{ .Values.service.spec.selector.app }}
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - name: {{ .Values.service.ports.name }}
+      port: {{ .Values.service.ports.port }}
+      targetPort: {{ .Values.service.ports.targetPort }}
+      protocol: TCP
+      # Optional field
+      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+      nodePort: {{ .Values.service.ports.externalPort }}

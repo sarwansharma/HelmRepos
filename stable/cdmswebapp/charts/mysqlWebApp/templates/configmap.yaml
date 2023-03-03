@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmap.name }}
+  namespace: {{ .Values.global.namespace }}
+data:
+  init.sql: |
+    CREATE DATABASE IF NOT EXISTS cdmsusers;
+    USE cdmsusers;
+    CREATE TABLE testusers (id INT, name VARCHAR(256), age INT, gender VARCHAR(3));
+    INSERT INTO testusers VALUES (1, 'sharma', 26, 'm');
+    INSERT INTO testusers VALUES (2, 'Syed', 27, 'm');
+    INSERT INTO testusers VALUES (3, 'Bhatnagar', 27, 'm');
