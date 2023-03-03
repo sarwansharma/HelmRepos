@@ -3,18 +3,18 @@ entries:
   cdmswebapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-02T15:04:45.651887719+05:30"
+    created: "2023-03-03T19:40:25.025626653+05:30"
     description: A Helm chart for Kubernetes
     digest: 97b1a27d56125a77abd97b286e249aa6f327b7c485189f44ec8ebec448c126e1
     name: cdmswebapp
     type: application
     urls:
-    - cdmswebapp-0.1.0.tgz
+    - stable/cdmswebapp-0.1.0.tgz
     version: 0.1.0
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: 2.6.1
-    created: "2023-03-02T15:04:45.653753889+05:30"
+    created: "2023-03-03T19:40:25.056175116+05:30"
     dependencies:
     - condition: metrics-server.enabled
       name: metrics-server
@@ -35,6 +35,66 @@ entries:
     sources:
     - https://github.com/kubernetes/dashboard
     urls:
-    - kubernetes-dashboard-5.8.0.tgz
+    - stable/kubernetes-dashboard-5.8.0.tgz
     version: 5.8.0
-generated: "2023-03-02T15:04:45.649992793+05:30"
+  loki-stack:
+  - apiVersion: v1
+    appVersion: v2.4.2
+    created: "2023-03-03T19:40:25.088462488+05:30"
+    description: 'Loki: like Prometheus, but for logs.'
+    digest: 068a123cbeb9600029aca8fade7777977d868c1d3b846c73576bff63ce48f81a
+    home: https://grafana.com/loki
+    icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: lokiproject@googlegroups.com
+      name: Loki Maintainers
+    name: loki-stack
+    sources:
+    - https://github.com/grafana/loki
+    urls:
+    - stable/loki-stack-2.6.5.tgz
+    version: 2.6.5
+  metrics-server:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Allow probes to be turned off completly (this is not advised unless you know what you're doing)."
+    apiVersion: v2
+    appVersion: 0.6.1
+    created: "2023-03-03T19:40:25.094095071+05:30"
+    description: Metrics Server is a scalable, efficient source of container resource
+      metrics for Kubernetes built-in autoscaling pipelines.
+    digest: a34fd9d1d0103cad4b6d4fd9c5e7791aabc40de7aa620d7a5bb59919d7cf2cfd
+    home: https://github.com/kubernetes-sigs/metrics-server
+    icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
+    keywords:
+    - kubernetes
+    - metrics-server
+    - metrics
+    maintainers:
+    - name: stevehipwell
+      url: https://github.com/stevehipwell
+    - name: krmichel
+      url: https://github.com/krmichel
+    - name: endrec
+      url: https://github.com/endrec
+    name: metrics-server
+    sources:
+    - https://github.com/kubernetes-sigs/metrics-server
+    type: application
+    urls:
+    - stable/metrics-server-3.8.2.tgz
+    version: 3.8.2
+  node-exporter:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-03T19:40:25.095206214+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 55bcc89781407d2e57d73cf6797216f485a5b0695581a233e987e9978cc24cdd
+    name: node-exporter
+    type: application
+    urls:
+    - stable/node-exporter-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-03-03T19:40:24.976762596+05:30"
